@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="partner_account_extension_view">
+            <field name="name">res.partner.view</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <group name="banks" position="before">
+                    <group>
+                        <field name="axx_invoice_report_id" domain="[('model','=','account.move')]"/>
+                    </group>
+
+                </group>
+            </field>
+        </record>
+    </data>
+</odoo>
